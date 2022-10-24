@@ -2,11 +2,44 @@
   background-color: rgb(255, 255, 255);
   &__main{
     background-color:#C3F53C;
-    @include display(space-between, center);
-    padding:0 20px;
+    @include display(flex-end, center);
+    padding:20px 20px;
+    &__section{
+      &>*{
+        margin: 30px 0;
+      }
+      font-family: roboto;
+      font-weight: 700;
+      width: 470px;
+      h1{
+        font-size: 49px;
+      }
+      p{
+        font-size: 24px
+      }
+      a{
+        padding: 10px 30px;
+        text-decoration: none;
+        color:rgb(255, 244, 244);
+        background-color:black;
+      }
+      &__about{
+        @include display(flex-start,center);
+        p{
+          margin-right:10px;
+          font-size: 16px;
+        }
+      }
+
+    }
+    &__img{
+      width: 500px;
+      margin-left: 10px;
+    }
   }
 }
 .navbar {
+  padding: 0 20px;
   @include display(space-between, center);
   &__logo {
     display: flex;
