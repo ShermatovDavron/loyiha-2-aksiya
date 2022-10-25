@@ -1,0 +1,35 @@
+.section{
+    &__text{
+        text-align: center;
+        padding: 15px 0;
+        font-family: roboto;
+        p{
+            a{
+                color:black;
+                font-weight: 700;
+            }
+        }
+    }
+    &__about{
+        @include display(flex-start, center);
+        font-family: roboto;
+        &__img{
+            width: 600px;
+            border-radius: 1px;
+            margin-right: 10px;
+        }
+        &__text{
+            @include display(center,flex-start);
+            flex-direction: column;
+            font-weight: 700;
+            h2{
+                font-size:40px;
+            }
+            &__link{
+                @include display(flex-start, center);
+                text-decoration: none;
+                color:black;
+            }
+        }
+    }
+}

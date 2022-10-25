@@ -1,0 +1,33 @@
+.main {
+  @include display(space-between, center);
+  margin-top: 15px;
+  &__card {
+    padding: 0 30px;
+    font-family: roboto;
+    h2 {
+      font-size: 29px;
+      font-weight: 500px;
+    }
+    &__about {
+      color: #6f787e;
+    }
+    &__text {
+      @include display(space-between, center);
+      width: 700px;
+      &__about {
+        width: 220px;
+      }
+    }
+    &__link{
+        @include display(flex-start,center);
+        text-decoration: none;
+        color:#6F787E;
+        p{
+            margin-left: 10px;
+        }
+    }
+  }
+  &__img{
+    margin-left: 10px;
+  }
+}
