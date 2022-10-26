@@ -1,0 +1,117 @@
+.footer{
+    padding: 0 30px;
+    background-color: black;
+    font-family: roboto;
+    &__item{
+        padding-top: 30px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #79858B;
+        @include display(space-between, flex-start);
+        &__link{
+            @include display(space-between, flex-start);
+            width: 500px;
+            ul{
+                padding: 0 10px;
+                list-style: none;
+                li{
+                    padding: 2px 0;
+                    margin: 0 20px;
+                    &:hover>a{
+                        color: aqua;
+                        transition: 0.3s;
+                    }
+                    a{
+                        text-decoration: none;
+                        color:white;
+                    }
+                }
+            }
+        }
+        &__form{
+            width: 450px;
+            padding-left: 20px;
+            margin-left: 50px;
+            &__text{
+                color:#79858B;
+                font-size: 15px;
+            }
+            form{
+                position: relative;
+                input{
+                    background-color:#1E2124;
+                    border-radius: 30px;
+                    padding: 10px 20px;
+                    color:white;
+                    width: 100%;
+                    border: none;
+                }
+                button{
+                    position: absolute;
+                    padding: 2px 20px;
+                    top: 7px;
+                    right: 10px;
+                    border-radius:20px;
+                    background-color:#00C805;
+                    color:black;
+                    border: none;
+                    &:hover{
+                        background-color:aqua;
+                        transition: 0.2s;
+                        cursor: pointer;
+                    }
+                }
+            }
+            &__link{
+                @include display(flex-start, flex-end);
+                flex-direction: column;
+                margin-top: 20px;
+                a{
+                    text-decoration: none;
+                    color:white;
+                    padding: 5px 0;
+                    cursor: pointer;
+                    &:hover{
+                        color:aqua;
+                        transition: 0.2s;
+                    }
+                }
+            }
+        }
+    }
+    &__about{
+        padding-bottom: 30px;
+        font-family: roboto;
+        color:white;
+        font-weight: 400;
+        padding: 20px 0;
+        font-size: 13px;
+        &__text{
+            margin: 10px 0;
+            padding: 10px 0;
+        }
+        p{
+            padding: 10px 0;
+            margin: 7px 0;
+        }
+        &__link{
+            @include display(flex-start,center);
+            a{
+                padding-left: 30px;
+                text-decoration: none;
+                color:#00C805;
+                &:hover{
+                    color:aqua;
+                }
+            }
+        }
+        &__found{
+            @include display(flex-start,center);
+            color:#79858B;
+            font-size: 15px;
+            text-decoration: none;
+            img{
+                padding-right: 10px;
+            }
+        }
+    }
+}

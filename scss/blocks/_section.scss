@@ -36,9 +36,9 @@
 }
 // Buy
 .buy{
+    padding: 30px 0;
     background-color: black;
     @include display(center,center);
-    padding: 70px 20px;
     &__item{
         padding-left:30px; 
         @include display(center,flex-end);
@@ -64,7 +64,7 @@
 .product{
     background-color:#F0EBE6;
     padding: 50px 70px;
-    @include display(space-between,center);
+    @include display(space-between,flex-start);
     &__card{
         width: 600px;
         font-family: roboto;
@@ -86,6 +86,34 @@
                 padding-left: 15px;
                 border-left: 2px solid black ;
             }
+        }
+        &__text{
+            font-size: 15px;
+            padding-top: 20px;
+            margin-bottom: 140px;
+        }
+        a{
+            text-decoration: none;
+            background-color:black;
+            color:white;
+            padding: 2px 25px;
+            border-radius:15px;
+            font-weight: 700;
+            font-size: 14px;
+        }
+        &__warn{
+            @include display(flex-start, center);
+            margin-top: 50px;
+            p{
+                font-size: 15px;
+                color:#6F787E;
+            }
+        }
+    }
+    &__img{
+        padding-left: 20px;
+        h5{
+            margin: 0;
         }
     }
 }
