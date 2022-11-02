@@ -2,8 +2,9 @@
   background-color: rgb(255, 255, 255);
   &__main{
     background-color:#C3F53C;
-    @include display(flex-end, center);
-    padding:20px 20px;
+    @include display(flex-start, center);
+    padding:20px 0px;
+    padding-left: 30px;
     &__section{
       &>*{
         margin: 30px 0;
@@ -14,7 +15,7 @@
       h1{
         font-size: 49px;
       }
-      p{
+      &__text{
         font-size: 24px
       }
       a{
@@ -189,4 +190,116 @@
     }
   }
 
+}
+.toggle{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 18px;
+  position: relative;
+  &::before{
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background-color:rgb(0, 0, 0);
+    bottom:0;
+  }
+  &::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background-color:rgb(0, 0, 0);
+    top:0;
+  }
+  span{
+    width: 100%;
+    height: 2px;
+    background-color:rgb(0, 0, 0);
+  }
+}
+.toggle_transform{
+  @include display(center, center);
+  width: 24px;
+  height: 18px;
+  position: relative;
+  &::before{
+    transform: rotate(-45deg);
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background-color:rgb(0, 0, 0); 
+  }
+  &::after{
+    transform: rotate(45deg);
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background-color:rgb(0, 0, 0);
+  }
+}
+@media only screen  and (max-width:766px){
+  .navbar{
+    padding: 5px 15px;
+    .toggle{
+      display: flex;
+      margin-left: auto;
+    }
+    &__item{
+      display: none;
+    }
+  }
+  .header__main{
+    @include display(center, center);
+    flex-wrap: wrap;
+    &__section{
+      width: 90%;
+      h1{
+        font-size: 44px;
+      }
+      &__text{
+        font-size: 20px;
+      }
+    }
+
+  }
+}
+@media only screen  and (max-width:440px){
+  .navbar{
+    padding: 5px 15px;
+    .toggle{
+      display: flex;
+      margin: 0 20px;
+      margin-left: auto;
+    }
+    &__link{
+      display: none;
+    }
+    &__item{
+      display: none;
+    }
+  }
+  .header__main{
+    @include display(center, center);
+    flex-wrap: wrap;
+    &__section{
+      width: 90%;
+      h1{
+        font-size: 33px;
+      }
+      &__text{
+        font-size: 16px;
+      }
+      &__about{
+        p{
+          font-size: 12px;
+        }
+      }
+    }
+
+  }
 }

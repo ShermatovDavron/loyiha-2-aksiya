@@ -34,6 +34,24 @@
         }
     }
 }
+@media only screen and (max-width:700px){
+    .section{
+        &__about{
+            @include display(center, center);
+            flex-direction: column;
+            &__img{
+                margin: 0 20px;
+            }
+            &__text{
+                width: 90%;
+                @include display (center,center);
+                h2{
+                    font-size:30px;
+                }
+            }
+        }
+    }
+}
 // Buy
 .buy{
     padding: 30px 0;
@@ -58,6 +76,55 @@
         width: 360px;
         color:white;
     }
+}
+@media only screen and (max-width:992px){
+    .container{
+        width: 96%;
+    }
+    .main{
+        flex-direction: column;
+        &__img{
+            img{
+                width: 600px;
+                height: 300px;
+                object-fit: cover;
+                margin: 20px 0;
+            }
+        }
+     }   
+}
+@media only screen and (max-width:768px){
+    .container{
+        width: 96%;
+    }
+    .main{
+        flex-direction: column;
+        &__card{
+            h2{
+                font-size: 30px;
+                text-align: center;
+            }
+            &__about{
+                font-size: 18px;
+                text-align: center;
+            }
+            &__text{
+                flex-wrap: wrap;
+                &__about{
+                    width: 250px;
+                    margin: 0 10px;
+                }
+            }
+        }
+        &__img{
+            img{
+                width: 500px;
+                height: 300px;
+                object-fit: cover;
+                margin: 20px 0;
+            }
+        }
+     }   
 }
 
 // Product
