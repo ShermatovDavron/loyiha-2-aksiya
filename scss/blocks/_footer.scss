@@ -115,3 +115,14 @@
         }
     }
 }
+
+// footer responsive
+
+@media only screen and (max-width:992px){
+    .footer__item{
+        width: 96%;
+        margin: 0 auto;
+        @include display(center, center);
+        flex-wrap: wrap;
+    }
+}

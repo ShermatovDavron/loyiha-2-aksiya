@@ -31,3 +31,55 @@
     margin-left: 10px;
   }
 }
+@media only screen and (max-width:992px){
+  .container{
+      width: 96%;
+  }
+  .main{
+      flex-direction: column;
+      &__img{
+          img{
+              width: 600px;
+              height: 300px;
+              object-fit: cover;
+              margin: 20px 0;
+          }
+      }
+   }   
+}
+@media only screen and (max-width:768px){
+  .container{
+      width: 96%;
+  }
+  .main{
+      flex-direction: column;
+      &__card{
+          h2{
+              font-size: 30px;
+              text-align: center;
+          }
+          &__about{
+            width: 98%;
+              font-size: 18px;
+              text-align: center;
+          }
+          &__text{
+              flex-wrap: wrap;
+              &__about{
+                text-align: center;
+                  width: 80%;
+                  margin: 0 auto;
+                  padding: 0 10px;
+              }
+          }
+      }
+      &__img{
+          img{
+              width: 500px;
+              height: 300px;
+              object-fit: cover;
+              margin: 20px 0;
+          }
+      }
+   }   
+}
