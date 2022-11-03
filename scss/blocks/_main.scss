@@ -54,6 +54,7 @@
   .main{
       flex-direction: column;
       &__card{
+        padding: 0 15px;
           h2{
               font-size: 30px;
               text-align: center;
@@ -66,10 +67,16 @@
           &__text{
               flex-wrap: wrap;
               &__about{
-                text-align: center;
-                  width: 80%;
-                  margin: 0 auto;
-                  padding: 0 10px;
+                width: 100%;
+                margin: 0 auto;
+                  h3{
+                    font-size: 1em;
+                    text-align: center;
+                  }
+                  p{
+                    font-size: 0.8em;
+                    text-align: center;
+                  }
               }
           }
       }

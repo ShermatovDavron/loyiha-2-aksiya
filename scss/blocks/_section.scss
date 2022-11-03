@@ -213,8 +213,10 @@
                 font-size: 22px;
             }
             &__link{
+                flex-wrap: wrap;
                h3{
-                font-size: 12px;
+                font-size: 11px;
+                padding: 0 5px;
                } 
             }
         }
