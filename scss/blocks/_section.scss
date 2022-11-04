@@ -35,6 +35,10 @@
     }
 }
 @media only screen and (max-width:700px){
+    .container{
+        width: 100%;
+        padding: 0 10px;
+      }
     .section{
         &__about{
             @include display(center, center);
@@ -105,8 +109,9 @@
 }
 @media only screen and (max-width:400px){
     .container{
-     width: 96%;
-    } 
+        width: 100%;
+        padding: 0 10px;
+      }
     .buy{
         a{
             font-size: 15px;
@@ -203,6 +208,10 @@
     
 }
 @media only screen and(max-width:400px){
+    .container{
+        width: 100%;
+        padding: 0 10px;
+      }
     .product{
         width: 98%;
         padding: 10px 20px;
