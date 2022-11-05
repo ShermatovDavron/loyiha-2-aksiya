@@ -1,7 +1,19 @@
 window.addEventListener('DOMContentLoaded', ()=>{
-    // Toggle
+// Loader
+const loader = document.querySelector('.loader')
+
+setTimeout(()=>{
+    loader.style.opacity='0'
+
+    setTimeout(()=>{
+        loader.style.display= 'none'
+    }, 500)
+}, 2000)
+
+// Toggle
 const header = document.querySelector('.header')
-const toggle = document.querySelector(".toggle")
+const toggle = document.querySelector('.toggle')
+
 
 toggle.addEventListener('click', ()=>{
     const ul = document.createElement('ul')

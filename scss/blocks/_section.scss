@@ -70,7 +70,7 @@
         &__item{
             color:#545D61;
             padding: 5px 2px;
-            margin: 5px 0;
+            margin: 5px 0px;
             cursor: pointer;
         }
         
@@ -96,6 +96,7 @@
 .buy__active{
     font-size: 19px;
     color:white;
+    transition: 0.5s;
 }
 .show{
     display: block;
