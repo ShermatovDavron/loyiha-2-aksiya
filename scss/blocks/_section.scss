@@ -59,22 +59,32 @@
 }
 // Buy
 .buy{
+   
     padding: 30px 0;
     background-color: black;
     @include display(center,center);
-    &__item{
+    &__items{
         padding-left:30px; 
         @include display(center,flex-end);
         flex-direction:column;
-        a{
-            text-decoration: none;
+        &__item{
             color:#545D61;
             padding: 5px 2px;
             margin: 5px 0;
+            cursor: pointer;
         }
+        
     }
     &__img{
-        width: 500px;
+        width: 400px;
+        height: 400px;
+        img {
+            object-fit: contain;
+            height: 100%;
+            width:80%;
+            margin: 0 10%;
+            border-radius:10px;
+        }
     }
     &__text{
         margin-right: 10px;
@@ -82,6 +92,16 @@
         width: 360px;
         color:white;
     }
+}
+.buy__active{
+    font-size: 19px;
+    color:white;
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
 }
 // buy responsive
 @media only screen and (max-width:720px){
