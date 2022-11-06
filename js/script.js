@@ -70,7 +70,25 @@ parentTab.addEventListener('click', (event)=>{
     }
 })
 
+// Timer
 
+const deadline = '2022-12-30'
+
+function getTimeRemaining (endtime){
+    const timer = Date.parse(endtime)-Date.parse(new Date()),
+        days = Math.floor(timer/(1000*60*60*24)),
+        hours = Math.floor((timer/(1000*60*60))%24),
+        minutes = Math.floor((timer/(1000*60))%60),
+        seconds = Math.floor((timer/(1000))%60)
+        return{
+            timer:timer,
+            days:days,
+            hours:hours,
+            minutes:minutes,
+            seconds:seconds
+        }
+}
+getTimeRemaining(deadline)
 
 
 
