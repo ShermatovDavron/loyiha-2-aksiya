@@ -72,14 +72,23 @@ parentTab.addEventListener('click', (event)=>{
 
 // Timer
 
-const deadline = '2022-12-30'
+const deadline = '2023-09-11'
 
 function getTimeRemaining (endtime){
-    const timer = Date.parse(endtime)-Date.parse(new Date()),
-        days = Math.floor(timer/(1000*60*60*24)),
-        hours = Math.floor((timer/(1000*60*60))%24),
-        minutes = Math.floor((timer/(1000*60))%60),
+    let days, hours, minutes, seconds
+    const timer = Date.parse(endtime)-Date.parse(new Date())
+    if(timer<=0){
+        days = 0
+        hours = 0
+        seconds = 0 
+        minutes = 0
+    }else{
+        days = Math.floor(timer/(1000*60*60*24))
+        hours = Math.floor((timer/(1000*60*60))%24)
+        minutes = Math.floor((timer/(1000*60))%60)
         seconds = Math.floor((timer/(1000))%60)
+    }
+    
         return{
             timer:timer,
             days:days,
@@ -88,8 +97,36 @@ function getTimeRemaining (endtime){
             seconds:seconds
         }
 }
-getTimeRemaining(deadline)
 
+function getZero(num){
+    if(num>=0 && num<10){
+        return `0${num}`
+    }else{
+        return num
+    }
+}
+
+function setclock (selector, endtime){
+    const timer = document.querySelector(selector),
+        days = timer.querySelector('#days'),
+        hours = timer.querySelector('#hours'),
+        minutes = timer.querySelector('#minutes'),
+        seconds = timer.querySelector('#seconds')
+        timerinterval = setInterval(uptadeclock, 1000)
+        uptadeclock()
+    function uptadeclock(){
+        t = getTimeRemaining(endtime)
+        days.innerHTML = getZero(t.days)
+        hours.innerHTML = getZero(t.hours)
+        minutes.innerHTML = getZero(t.minutes)
+        seconds.innerHTML = getZero(t.seconds)
+        if(t.timer<=0){
+            clearTimeout(timerinterval)
+        }
+    }
+}
+
+setclock('.timer', deadline)
 
 
     

@@ -1,0 +1,40 @@
+.timerclock{
+    background-color: #111;
+    padding: 20px 10px;
+    @include display(space-between,center);
+    font-family: roboto;
+    h1{
+        font-size: 30px;
+        background:linear-gradient(
+            90deg,
+            rgb(209, 207, 239) 0%,
+            rgb(23, 193, 223) 35%,
+            rgb(255, 0, 0) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color:transparent;
+    }
+    .timer{
+        
+        @include display(flex-end, center);
+        div{
+            width: 100px;
+            margin-left: 15px;
+            padding: 0 15px;
+            color:rgb(0, 0, 0);
+            background-color:rgb(255, 255, 255);
+            border:1px solid rgb(14, 251, 255);
+            border-radius: 5px;
+            text-align: center;
+            span{
+                font-size: 45px;
+                display: block;
+            }
+        }
+    }
+}
+.timerend{
+    font-size: 30px;
+    font-family: roboto;
+    color:white;
+}
