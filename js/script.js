@@ -72,7 +72,7 @@ parentTab.addEventListener('click', (event)=>{
 
 // Timer
 
-const deadline = '2023-09-11'
+const deadline = '2023-07-25'
 
 function getTimeRemaining (endtime){
     let days, hours, minutes, seconds
