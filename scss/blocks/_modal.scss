@@ -4,17 +4,48 @@
     top: 0;
     left: 0;
     @include display(center, center);
+    display: none;
     background:rgba($color: #000000, $alpha: 0.6) ;
     height:100vh;
     width: 100%;
-    z-index: 1050px;
+    z-index: 1050;
     &__card{
+        position: absolute;
+        top: 30vh;
+        left: 40vw;
         width: 400px;
-        background-color: white;
-        border: 2px solid black;
+        background: rgba($color: #565252, $alpha: 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.319);
         border-radius: 10px;
         &__form{
             padding: 20px;
+            &__input{
+                padding: 10px 20px;
+                border:none;
+                background:rgba($color: #ffffff, $alpha: 0.9);
+                border-radius:10px;
+                margin: 10px 0;
+                width: 100%;
+                &:focus{
+                    border:none;
+                    background-color: aquamarine;
+                    color:#000000;
+                }
+            }
+            &__send{
+                
+                @include display(center,center);
+                h5{
+                    background-color:#555;
+                    padding-bottom: 3px;
+                }
+                button{
+                    border-radius:20px;
+                    background-color:aqua;
+                    padding: 12px 25px;
+                    margin: 10px 0;
+                }
+            }
         }
     }
 }

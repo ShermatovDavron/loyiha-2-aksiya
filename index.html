@@ -14,7 +14,7 @@
         <div class="loader__lds-hourglass"></div>
     </div>
    <!-- Header -->
-    <header class="header container">
+    <header class="container header">
         <nav class="navbar">
             <div class="navbar__logo">
                 <img src="./img/logo.svg" alt="logotip">
@@ -33,14 +33,14 @@
             </div>
             <div class="navbar__link">
                 <a href="#" class="navbar__link__login">Log In</a>
-                <a class="navbar__link__singup" href="#">Sing Up</a>
+                <a data-show class="navbar__link__singup" href="#">Sing Up</a>
             </div>
         </nav>
         <div class="header__main">
             <div class="header__main__section">
                 <h1>Investing for Everyone</h1>
                 <p class="header__main__section__text">Commission-free investing, plus the tools you need to put your money in motion. Sign up and get your first stock for free. Certain limitations apply.</p>
-                <a href="#" class="navbar__link__singup">Sing Up</a>
+                <a data-show href="#" class="navbar__link__singup">Sing Up</a>
                 <div class="header__main__section__about">
                     <p>Commissions & Free Stock Disclosures</p>
                     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -58,14 +58,15 @@
         <div class="modal">
             <div class="modal__card">
                 <form action="sendemail" class="modal__card__form">
-                    <input type="email" name="email" placeholder="email" id="email">
-                    <input type="tel" name="tel" placeholder="phone number" id="tel">
-                    <input type="password" name="password" id="password">
+                    <input class="modal__card__form__input" type="email" name="email" placeholder="email" id="email">
+                    <input class="modal__card__form__input" type="tel" name="tel" placeholder="phone number" id="tel">
+                    <input class="modal__card__form__input" type="password" name="password" placeholder="password" id="password">
                     <div class="madal__card__form__send">
                         <h5>eslab qolish</h5>
                         <input type="checkbox" name="checkbox" id="checkbox">
                         <button type="submit">Send</button>
                     </div>
+                    <div data-close class="modal__card__form__close"></div>
                 </form>
             </div>
         </div>

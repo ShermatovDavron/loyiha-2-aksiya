@@ -128,7 +128,26 @@ function setclock (selector, endtime){
 
 setclock('.timer', deadline)
 
+// Modal
 
-    
+const modalShow = document.querySelector('[data-show]'),
+    modalCloseBtn = document.querySelector('[data-close]'),
+    modal = document.querySelector('.modal')
+
+    function modalClose(){
+        modal.classList.add('hide')
+        modal.classList.remove('show')
+        modal.style.overflow =''
+    }
+
+    modalShow.addEventListener((click), ()=>{
+        modal.classList.add('show')
+        modal.classList.remove('.hide')
+        modal.style.overflow = 'hidden'
+    })
+
+    modalCloseBtn.addEventListener((click), ()=>{
+        modalClose()
+    })
 
 })
