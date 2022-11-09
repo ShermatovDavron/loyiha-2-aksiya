@@ -128,26 +128,65 @@ function setclock (selector, endtime){
 
 setclock('.timer', deadline)
 
-// Modal
+// // Modal
 
-const modalShow = document.querySelector('[data-show]'),
-    modalCloseBtn = document.querySelector('[data-close]'),
-    modal = document.querySelector('.modal')
+// const modalShow = document.querySelector('[data-show]'),
+//     modalCloseBtn = document.querySelector('[data-close]'),
+//     modal = document.querySelector('.modal')
 
-    function modalClose(){
-        modal.classList.add('hide')
-        modal.classList.remove('show')
-        modal.style.overflow =''
+//     function modalClose(){
+//         modal.classList.add('hide')
+//         modal.classList.remove('show')
+//         modal.style.overflow =''
+//     }
+
+//     modalShow.addEventListener('click', ()=>{
+//         modal.classList.add('show')
+//         modal.classList.remove('hide')
+//         // modal.style.overflow = 'hidden'
+//     })
+
+//     modalCloseBtn.addEventListener((click), ()=>{
+//         modalClose()
+//     })
+
+    // Class
+
+    class MenuCard {
+        constructor(title, about, parentselector){
+            this.title = title,
+            this.about = about,
+            this.parent = document.querySelector(parentselector)
+        }
+
+        render(){
+            const element = document.createElement('div')
+            element.innerHTML = `
+            <div class="main__card__text__about">
+                 <h3>${this.title}</h3>
+                 <p >${this.about}</p>
+            </div>
+        `
+        this.parent.append(element)
+        }
     }
 
-    modalShow.addEventListener((click), ()=>{
-        modal.classList.add('show')
-        modal.classList.remove('.hide')
-        modal.style.overflow = 'hidden'
-    })
-
-    modalCloseBtn.addEventListener((click), ()=>{
-        modalClose()
-    })
+    new MenuCard(
+        "Invest Any Amount",
+        "Choose how much you want to invest, and we’ll convert from dollars to parts of a whole share.",
+        ".main__card__text"
+        ).render()
+    
+        new MenuCard(
+            "Build a Balanced Portfolio",
+            "Customize your portfolio with pieces of different companies and funds to help reduce risk.",
+            ".main__card__text"
+            ).render()
+        
+        new MenuCard(
+            "Trade in Real Time",
+            "Trades placed during market hours are executed at that time, so you’ll always know the share price.",
+            ".main__card__text"
+            ).render()
 
 })
